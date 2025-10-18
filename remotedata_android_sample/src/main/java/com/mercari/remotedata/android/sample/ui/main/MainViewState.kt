@@ -4,7 +4,7 @@ import android.os.Parcelable
 import com.mercari.remotedata.android.ErrorKind
 import com.mercari.remotedata.android.RemoteData
 import com.mercari.remotedata.android.RemoteData.Initial
-import kotlinx.android.parcel.Parcelize
+import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class MainViewState(

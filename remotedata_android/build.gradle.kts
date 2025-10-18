@@ -1,6 +1,7 @@
 plugins {
     id("com.android.library")
     id("kotlin-android")
+    id("kotlin-parcelize")
     id("de.mannodermaus.android-junit5")
 }
 
@@ -30,6 +31,7 @@ dependencies {
 android {
     compileSdkVersion(AndroidConfig.compileSdkVersion)
 
+    namespace = "com.mercari.remotedata.android"
     defaultConfig {
         minSdkVersion(AndroidConfig.minSdkVersion)
         targetSdkVersion(AndroidConfig.targetSdkVersion)
@@ -38,5 +40,10 @@ android {
     testOptions {
         unitTests.isIncludeAndroidResources = true
         unitTests.isReturnDefaultValues = true
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 }

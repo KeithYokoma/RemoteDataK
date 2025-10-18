@@ -60,7 +60,7 @@ object TestDependencies {
 }
 
 object AndroidConfig {
-  const val compileSdkVersion = 29
-  const val minSdkVersion = 21
-  const val targetSdkVersion = 29
+  const val compileSdkVersion = 36
+  const val minSdkVersion = 29
+  const val targetSdkVersion = 36
 }

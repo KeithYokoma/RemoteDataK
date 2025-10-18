@@ -3,7 +3,7 @@ package com.mercari.remotedata.android
 import android.os.Parcel
 import android.os.Parcelable
 import android.os.Parcelable.Creator
-import kotlinx.android.parcel.Parcelize
+import kotlinx.parcelize.Parcelize
 
 interface ErrorKind : Parcelable
 
@@ -57,8 +57,8 @@ sealed class RemoteData<out V : Any, out E : ErrorKind> : Parcelable {
         override fun hashCode(): Int =
                 (javaClass.hashCode() * 31 + progress?.plus(1).hashCode()) * 31 + totalUnits.hashCode()
 
-        override fun writeToParcel(dest: Parcel?, flags: Int) {
-            dest?.apply {
+        override fun writeToParcel(dest: Parcel, flags: Int) {
+            dest.apply {
                 writeInt(progress ?: -1)
                 writeInt(totalUnits)
             }
@@ -90,8 +90,8 @@ sealed class RemoteData<out V : Any, out E : ErrorKind> : Parcelable {
                     other is Success<*> && other.value == value
                 }
 
-        override fun writeToParcel(dest: Parcel?, flags: Int) {
-            dest?.writeValue(value)
+        override fun writeToParcel(dest: Parcel, flags: Int) {
+            dest.writeValue(value)
         }
 
         override fun describeContents(): Int = 0
