@@ -2,7 +2,9 @@ buildscript {
 
     repositories {
         google()
-        jcenter()
+        maven("https://repo1.maven.org/maven2")
+        mavenCentral()
+        maven("https://plugins.gradle.org/m2/")
     }
 
     dependencies {
@@ -10,14 +12,13 @@ buildscript {
         classpath(Classpath.android)
         classpath(Classpath.androidJunit5)
         classpath(Classpath.junitPlatform)
-        classpath(Classpath.bintray)
     }
 }
 
 allprojects {
     repositories {
         google()
-        jcenter()
+        mavenCentral()
         maven { setUrl(MavenUrl.spekDev) }
     }
 }

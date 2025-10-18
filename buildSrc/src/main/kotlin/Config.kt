@@ -10,14 +10,13 @@ object MavenUrl {
 }
 
 object Version {
-  const val android = "3.6.2"
-  const val androidJunit5 = "1.6.0.0"
-  const val bintray = "1.8.4"
-  const val kotlin = "1.3.30"
-  const val kluent = "1.60"
-  const val spek = "2.0.10"
+  const val android = "8.13.0"
+  const val androidJunit5 = "1.9.0.0"
+  const val kotlin = "2.2.20"
+  const val kluent = "1.72"
+  const val spek = "2.0.19"
   const val junitPlatform = "1.2.0"
-  const val junitEngine = "5.6.0"
+  const val junitEngine = "6.0.0"
   const val junit4 = "4.13"
   const val jacoco = "0.8.3"
 
@@ -34,7 +33,6 @@ object Classpath {
   const val androidJunit5 = "de.mannodermaus.gradle.plugins:android-junit5:${Version.androidJunit5}"
   const val kotlin = "gradle-plugin"
   const val junitPlatform = "org.junit.platform:junit-platform-gradle-plugin:${Version.junitPlatform}"
-  const val bintray = "com.jfrog.bintray.gradle:gradle-bintray-plugin:${Version.bintray}"
 }
 
 object Dependencies {
